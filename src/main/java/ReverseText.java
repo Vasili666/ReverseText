@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.ArrayList;
-
+// 1.   Ввести строки из файла, записать в список. Вывести строки в файл в обратном порядке.
 
 public class ReverseText {
     public static void main(String[] args) throws IOException {
@@ -35,12 +35,10 @@ public class ReverseText {
              writer.write(s);
 
              try {
-                 for (int i=text.size()-1; i>-1;i--){
+                 for (int i=text.size()-1; i>-1;i--){              //Начинаем с конца списка записывать в файл
                      writer.write(String.valueOf(text.get(i)));
                      writer.append('\n');
-
                  }
-
                  writer.flush();
              } finally {
                  writer.close();
